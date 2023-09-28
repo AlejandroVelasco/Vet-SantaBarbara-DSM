@@ -3,9 +3,11 @@ Proyecto UDB DSM - Veterinaria Santa Barbara
 
 Enlaces de Interés
 
-[Tablero de Trello] - https://trello.com/b/iEArK18n/vet-santabarbara-dsm
-[Diseño de Mock Ups] - https://www.figma.com/file/3nAv8wswWJxdx4gJYKCNYY/Mokups-DSM_UDB?type=design&node-id=0%3A1&mode=design&t=2gAzMH9bDcFqAWvL-1
-[Fase I] - https://drive.google.com/file/d/17BdIWlnc9efmr8L8-NyvNOrWAbSs8K0m/view?usp=sharing
+[Tablero de Trello] - https://trello.com/b/iEArK18n/vet-santabarbara-dsm 
+
+[Diseño de Mock Ups] - https://www.figma.com/file/3nAv8wswWJxdx4gJYKCNYY/Mokups-DSM_UDB?type=design&node-id=0%3A1&mode=design&t=2gAzMH9bDcFqAWvL-1 
+
+[Fase I] - https://drive.google.com/file/d/17BdIWlnc9efmr8L8-NyvNOrWAbSs8K0m/view?usp=sharing 
 
 
 LICENCIA CREATIVE COMMONS

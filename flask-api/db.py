@@ -4,8 +4,8 @@ from mysql.connector import Error
 
 #Diccionarios para conexion a alepo y a base de datos local
 vet_santa_barbara = {
-    'user': 'root',
-    'password':'AevPwd$',
+    'user': 'vetsb',
+    'password':'A1b2c3d4e5F6',
     'host':'localhost',
     'port':3306,
     'database':'vet_santa_barbara',

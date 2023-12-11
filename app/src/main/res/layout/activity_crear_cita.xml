@@ -37,45 +37,7 @@
         app:layout_wrapBehaviorInParent="skipped">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/especialidad"
-            android:layout_width="257dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="260dp"
-            android:layout_marginEnd="35dp"
-            android:autoText="false"
-            android:background="#FFFFFF"
-            android:hint="especialidad"
-            android:hyphenationFrequency="none"
-            android:selectAllOnFocus="false"
-            android:singleLine="false"
-            android:textAlignment="center"
-            app:textInputLayoutFocusedRectEnabled="false" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/horario"
-            android:layout_width="257dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="211dp"
-            android:layout_marginEnd="35dp"
-            android:autoText="false"
-            android:background="#FFFFFF"
-            android:hint="Horario de turno"
-            android:hyphenationFrequency="none"
-            android:selectAllOnFocus="false"
-            android:singleLine="false"
-            android:textAlignment="center"
-            app:textInputLayoutFocusedRectEnabled="false" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/doctor"
+            android:id="@+id/idDoctorCita"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/CItaNameTV"
@@ -86,7 +48,7 @@
             android:layout_marginEnd="36dp"
             android:autoText="false"
             android:background="#FFFFFF"
-            android:hint="Direcion"
+            android:hint="Doctor"
             android:hyphenationFrequency="none"
             android:selectAllOnFocus="false"
             android:singleLine="false"
@@ -94,18 +56,18 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/id_paciente"
+            android:id="@+id/fechaCita"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/CItaNameTV"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="29dp"
+            android:layout_marginStart="34dp"
             android:layout_marginTop="119dp"
-            android:layout_marginEnd="41dp"
+            android:layout_marginEnd="36dp"
             android:autoText="false"
             android:background="#FFFFFF"
-            android:hint="Correo electronico"
+            android:hint="Fecha"
             android:hyphenationFrequency="none"
             android:selectAllOnFocus="false"
             android:singleLine="false"
@@ -113,18 +75,18 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/paciente"
+            android:id="@+id/horaCita"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/CItaNameTV"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="165dp"
-            android:layout_marginEnd="33dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="161dp"
+            android:layout_marginEnd="37dp"
             android:autoText="false"
             android:background="#FFFFFF"
-            android:hint="Telefono"
+            android:hint="Hora"
             android:hyphenationFrequency="none"
             android:selectAllOnFocus="false"
             android:singleLine="false"
@@ -141,7 +103,7 @@
             android:layout_marginStart="11dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="211dp"
-            android:text="Crear Doctor" />
+            android:text="Crear Cita" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -152,7 +114,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/id_doctor"
+            android:id="@+id/idPacienteCita"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/CItaNameTV"
@@ -163,7 +125,7 @@
             android:layout_marginEnd="35dp"
             android:autoText="false"
             android:background="#FFFFFF"
-            android:hint="Nombre completo"
+            android:hint="Paciente"
             android:hyphenationFrequency="none"
             android:selectAllOnFocus="false"
             android:singleLine="false"
@@ -183,10 +145,10 @@
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/especialidad"
+            android:layout_below="@id/horaCita"
             android:layout_marginTop="39dp"
             android:backgroundTint="#7582F2"
-            android:onClick="crearDoctor"
+            android:onClick="crearCita"
             android:text="Crear"
             android:textColor="#FFFFFF" />
 

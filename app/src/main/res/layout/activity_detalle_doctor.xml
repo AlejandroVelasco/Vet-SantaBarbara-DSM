@@ -21,10 +21,10 @@
         app:layout_wrapBehaviorInParent="skipped">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/turno"
+            android:id="@+id/horarioDoctor"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/doctorNameTV"
+            android:layout_below="@+id/idDoctor"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="33dp"
@@ -40,10 +40,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/direccion"
+            android:id="@+id/direccionDoctor"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/doctorNameTV"
+            android:layout_below="@+id/idDoctor"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="35dp"
@@ -59,10 +59,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+            android:id="@+id/emailDoctor"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/doctorNameTV"
+            android:layout_below="@+id/idDoctor"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="37dp"
@@ -78,10 +78,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/telefono"
+            android:id="@+id/telefonoDoctor"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/doctorNameTV"
+            android:layout_below="@+id/idDoctor"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="33dp"
@@ -97,10 +97,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ly"
+            android:id="@+id/especialidadDoctor"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/doctorNameTV"
+            android:layout_below="@+id/idDoctor"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="37dp"
@@ -116,7 +116,7 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <TextView
-            android:id="@+id/doctorNameTV"
+            android:id="@+id/idDoctor"
             android:layout_width="246dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -130,16 +130,16 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/doctorNameTV"
+            android:layout_below="@+id/idDoctor"
             android:layout_marginTop="-34dp">
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nombreCompleto"
+            android:id="@+id/nombreDoctor"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/doctorNameTV"
+            android:layout_below="@+id/idDoctor"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="35dp"
@@ -159,7 +159,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ly"
+            android:layout_below="@+id/especialidadDoctor"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="92dp"

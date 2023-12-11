@@ -3,20 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".Crear_Paciente">
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="96dp"
-        android:layout_height="173dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/santa_b_rbara_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="327dp"
@@ -39,7 +26,7 @@
             android:id="@+id/raza"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="37dp"
@@ -58,7 +45,7 @@
             android:id="@+id/especie"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="35dp"
@@ -77,7 +64,7 @@
             android:id="@+id/nombreCompletoPropietario"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="36dp"
@@ -96,7 +83,7 @@
             android:id="@+id/peso"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="31dp"
@@ -112,10 +99,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nombreCompleto"
+            android:id="@+id/nombreCompletoPaciente"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="31dp"
@@ -131,10 +118,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/id_doctor"
+            android:id="@+id/color"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="35dp"
@@ -150,10 +137,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/doctor"
+            android:id="@+id/domicilioPaciente"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="34dp"
@@ -169,10 +156,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/id_paciente"
+            android:id="@+id/correoPaciente"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="35dp"
@@ -188,10 +175,10 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/paciente"
+            android:id="@+id/telefonoPaciente"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="37dp"
@@ -207,7 +194,7 @@
             app:textInputLayoutFocusedRectEnabled="false" />
 
         <TextView
-            android:id="@+id/CItaNameTV"
+            android:id="@+id/idPaciente"
             android:layout_width="246dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -216,12 +203,12 @@
             android:layout_marginStart="11dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="70dp"
-            android:text="Crear Paciente" />
+            android:text="ID Paciente" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/CItaNameTV"
+            android:layout_below="@+id/idPaciente"
             android:layout_marginTop="-34dp">
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -231,27 +218,28 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/paciente"
+            android:layout_below="@id/telefonoPaciente"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="91dp"
             android:layout_marginTop="42dp"
             android:layout_marginEnd="106dp"
             android:background="#7582F2"
-            android:onClick="crearPaciente"
-            android:text="Crear"
+            android:onClick="modificar"
+            android:text="Actualizar"
             android:textColor="#FFFFFF" />
 
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="96dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/santa_b_rbara_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

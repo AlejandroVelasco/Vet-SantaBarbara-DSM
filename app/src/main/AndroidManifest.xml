@@ -25,7 +25,22 @@
             android:name=".Crear_Paciente"
             android:exported="false" />
         <activity
+            android:name=".Listar_Paciente"
+            android:exported="false" />
+        <activity
+            android:name=".Crear_Cita"
+            android:exported="false" />
+        <activity
+            android:name=".Listar_Cita"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleCitaActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetalleDoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetallePacienteActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

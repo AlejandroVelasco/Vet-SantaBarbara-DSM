@@ -1,19 +1,19 @@
-package com.example.vet_santabarbara
+package com.example.vet_santabarbara.adapters
 
 import android.view.View
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vet_santabarbara.R
 import com.example.vet_santabarbara.models.Doctor
 
 class DoctorAdapter(private val doctores: List<Doctor>, val onItemClickListener: (Doctor) -> Unit) : RecyclerView.Adapter<DoctorAdapter.DoctorViewHolder>() {
 
     class DoctorViewHolder(val view: View, val onItemClickListener: (Doctor) -> Unit) : RecyclerView.ViewHolder(view) {
         // Referencias a los elementos de la UI del CardView, por ejemplo:
-        private val doctorNameTextView: TextView = view.findViewById(R.id.doctorNameTextView)
-        private val doctorSpecialtyTextView: TextView = view.findViewById(R.id.doctorSpecialtyTextView)
+        private val doctorNameTextView: TextView = view.findViewById(R.id.pacienteTextView)
+        private val doctorSpecialtyTextView: TextView = view.findViewById(R.id.propietarioTextView)
 
         // Método para asociar datos del objeto Doctor con elementos de la UI
         fun bind(doctor: Doctor) {

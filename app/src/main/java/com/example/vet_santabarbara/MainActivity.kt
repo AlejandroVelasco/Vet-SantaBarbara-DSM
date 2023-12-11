@@ -15,5 +15,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Listar_Doctor::class.java)
             startActivity(intent)
         }
+
+        val listarPacienteBtn: Button = findViewById(R.id.btnPacientes)
+        listarPacienteBtn.setOnClickListener {
+            val intent = Intent(this, Listar_Paciente::class.java)
+            startActivity(intent)
+        }
+
+        val listarCitaBtn: Button = findViewById(R.id.btnCitas)
+        listarCitaBtn.setOnClickListener {
+            val intent = Intent(this, Listar_Cita::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -37,13 +37,13 @@ class DetalleDoctorActivity: AppCompatActivity() {
         val apiService = retrofit.create(ApiService::class.java)
 
         // Obtener valores necesarios para la modificación
-        val nombre = findViewById<EditText>(R.id.nombreCompleto)
-        val especialidad = findViewById<EditText>(R.id.ly)
-        val direccion = findViewById<EditText>(R.id.direccion)
-        val telefono = findViewById<EditText>(R.id.telefono)
-        val email = findViewById<EditText>(R.id.email)
-        val horario = findViewById<EditText>(R.id.turno)
-        val id = findViewById<TextView>(R.id.doctorNameTV)
+        val nombre = findViewById<EditText>(R.id.nombreDoctor)
+        val especialidad = findViewById<EditText>(R.id.especialidadDoctor)
+        val direccion = findViewById<EditText>(R.id.direccionDoctor)
+        val telefono = findViewById<EditText>(R.id.telefonoDoctor)
+        val email = findViewById<EditText>(R.id.emailDoctor)
+        val horario = findViewById<EditText>(R.id.horarioDoctor)
+        val id = findViewById<TextView>(R.id.idDoctor)
 
         // Crear un objeto Doctor con los nuevos valores
         val doctorModificado = Doctor(Integer.parseInt(id.text.toString()), nombre.text.toString(), especialidad.text.toString(), "1997-11-23", direccion.text.toString(), telefono.text.toString(), horario.text.toString(), email.text.toString())
@@ -84,13 +84,13 @@ class DetalleDoctorActivity: AppCompatActivity() {
                 if (response.isSuccessful) {
                     val doctorDetails = response.body()
                     if (doctorDetails != null) {
-                        val nombreTextView: TextView = findViewById(R.id.doctorNameTV)
-                        val nombreCompleto: EditText = findViewById(R.id.nombreCompleto)
-                        val domicilio: EditText = findViewById(R.id.direccion)
-                        val correo: EditText = findViewById(R.id.email)
-                        val telefono: EditText = findViewById(R.id.telefono)
-                        val horario: EditText = findViewById(R.id.turno)
-                        val especialidad: EditText = findViewById(R.id.ly)
+                        val nombreTextView: TextView = findViewById(R.id.idDoctor)
+                        val nombreCompleto: EditText = findViewById(R.id.nombreDoctor)
+                        val domicilio: EditText = findViewById(R.id.direccionDoctor)
+                        val correo: EditText = findViewById(R.id.emailDoctor)
+                        val telefono: EditText = findViewById(R.id.telefonoDoctor)
+                        val horario: EditText = findViewById(R.id.horarioDoctor)
+                        val especialidad: EditText = findViewById(R.id.especialidadDoctor)
 
                         // Asigna los datos del doctor a las vistas
                         nombreTextView.text = doctorDetails.id_doctor.toString()

@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Button;
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vet_santabarbara.adapters.CitaAdapter
 import com.example.vet_santabarbara.api.ApiService
 import com.example.vet_santabarbara.models.Doctor
 import retrofit2.Call
@@ -15,15 +16,16 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import com.example.vet_santabarbara.adapters.DoctorAdapter
+import com.example.vet_santabarbara.models.Cita
 
-class Listar_Doctor : AppCompatActivity() {
+class Listar_Cita : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listar_doctor)
+        setContentView(R.layout.activity_listar_cita)
 
-        val crearDoctorBtn: Button = findViewById(R.id.crearCita)
-        crearDoctorBtn.setOnClickListener {
-            val intent = Intent(this, Crear_Doctor::class.java)
+        val crearCitaBtn: Button = findViewById(R.id.crearCita)
+        crearCitaBtn.setOnClickListener {
+            val intent = Intent(this, Crear_Cita::class.java)
             startActivity(intent)
         }
 
@@ -35,29 +37,27 @@ class Listar_Doctor : AppCompatActivity() {
         val apiService = retrofit.create(ApiService::class.java  )
         val recyclerView: RecyclerView = findViewById(R.id.CitaRecyclerView)
 
-        apiService.getDoctores().enqueue(object : Callback<List<Doctor>> {
-            override fun onResponse(call: Call<List<Doctor>>, response: Response<List<Doctor>>) {
+        apiService.getCitas().enqueue(object : Callback<List<Cita>> {
+            override fun onResponse(call: Call<List<Cita>>, response: Response<List<Cita>>) {
                 if (response.isSuccessful) {
-                    val doctorList = response.body() ?: emptyList()
+                    val citaList = response.body() ?: emptyList()
                     recyclerView.setHasFixedSize(true)
-                    recyclerView.layoutManager = LinearLayoutManager(this@Listar_Doctor)
-//                    recyclerView.adapter = DoctorAdapter(doctorList)
+                    recyclerView.layoutManager = LinearLayoutManager(this@Listar_Cita)
 
                     // Declaración de onItemClickListener aquí
-                    val onItemClickListener: (Doctor) -> Unit = { selectedDoctor ->
+                    val onItemClickListener: (Cita) -> Unit = { selectedCita ->
                         // Abre la pantalla de detalle del doctor
-                        val intent = Intent(this@Listar_Doctor, DetalleDoctorActivity::class.java)
-                        intent.putExtra("doctorId", selectedDoctor.id_doctor)
+                        val intent = Intent(this@Listar_Cita, DetalleCitaActivity::class.java)
+                        intent.putExtra("citaId", selectedCita.id_cita)
                         startActivity(intent)
                     }
-                    val doctorAdapter = DoctorAdapter(doctorList, onItemClickListener)
-                    recyclerView.adapter = doctorAdapter
+                    val citaAdapter = CitaAdapter(citaList, onItemClickListener)
+                    recyclerView.adapter = citaAdapter
                 }
             }
 
-            override fun onFailure(call: Call<List<Doctor>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Cita>>, t: Throwable) {
                 // Manejar fallos
-//                Toast.makeText(this@Listar_Doctor, "Fallo en la conexión: ${t.message}", Toast.LENGTH_LONG).show()
                 Log.e("Network", "Fallo en la conexión: ${t.message}", t)
 
             }
